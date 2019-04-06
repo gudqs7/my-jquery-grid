@@ -12,7 +12,7 @@
 }
 
 .grid-wrapper.theme-pengcheng table > tbody > tr:nth-of-type(odd) {
-    background-color: white;
+    background-color: #f3f3f3;
 }
 
 .grid-wrapper.theme-pengcheng table > thead > tr > th {
@@ -32,6 +32,7 @@
 }
 
 .grid-wrapper .table_head {
+    z-index: 9999;
     height: 39px;
     position: relative;
     overflow: hidden;
@@ -47,16 +48,24 @@
 }
 
 .grid-wrapper *:not(i) {
-    font-family: Verdana, Arial, Helvetica, AppleGothic, sans-serif;
+    font-family: Helvetica Neue, Microsoft Sans Serif, sans-serif;
 }
 
 .grid-wrapper table > tbody > tr:nth-of-type(odd) {
     background-color: #f9f9f9
 }
 .grid-wrapper .grid-page{
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
     border-top:1px solid #ddd;
+    overflow: hidden;
+}
+
+.grid-wrapper .grid-page .grid-page-elem {
+    padding: 0 10px;
+}
+
+.grid-wrapper .grid-page .grid-page-elem .layui-laypage {
+    margin: 5px 0;
 }
 .grid-wrapper .grid-content{
     overflow: hidden;
@@ -65,7 +74,8 @@
 .grid-wrapper .table_head{
     background: white;
 }
-.grid-wrapper .table_head table{
+
+.grid-wrapper .table {
     width: 100%;
 }
 .grid-wrapper .table_body{
@@ -73,7 +83,11 @@
     height: 560px;
 }
 .grid-wrapper table tbody tr:hover, .grid-wrapper table tbody tr.grid-selected{
-    background: #ECF7FF;
+    background: #ECF7FF !important;
+}
+
+.grid-wrapper table tbody tr.moving {
+    background: #ffa72b !important;
 }
 .grid-wrapper .grid-content{
     border: 1px solid #dddddd;
@@ -81,6 +95,15 @@
     word-break: keep-all;
     word-spacing: normal;
     word-wrap: normal;
+}
+
+.grid-content .table th.sorting .column-name{
+    font-weight: 900;
+    color: #111;
+}
+.grid-content .table th.searching .column-name{
+    font-style: italic;
+    font-weight: bold;
 }
 .grid-content .table th{
     text-align: left;
@@ -271,6 +294,33 @@ fieldset[disabled] .column-down-menu .form-control {
 div.grid-not-data{
     text-align: center;
     margin-top: 100px;
-    color: #5888dd;
+    color: #009688;
     font-size: 14px;
+}
+
+
+.my-table .layui-form-switch{
+    margin-top: 0;
+}
+
+.my-table th{
+    padding: 8px;
+}
+.my-table td{
+    padding: 8px;
+    line-height: 1.42857143;
+}
+
+.table_body .column-filter .column-down-menu li:not(.sort) span.menu-icon {
+    padding-right: 16px;
+}
+
+.table_body .column-filter .column-down-menu li .filter-checkbox {
+    padding-left: 10px;
+}
+
+.grid-wrapper .grid-page .static-count {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 36px;
 }

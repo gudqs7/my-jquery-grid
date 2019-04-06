@@ -5,10 +5,12 @@
 
 ### 前端
 
-引入 css, js
-```html
-<link rel="stylesheet" type="text/css" href="jq-grid.css">
-<script type="text/javascript" src="jq-grid.js"></script>
+```js
+layui.define(['layer', 'grid', 'form'], function (exports) {
+   var grid = _$this.find('.user-list').grid({
+        ...
+   }) 
+});
 ```
 
 > 这是一个带有显示, 过滤(支持几种类型), 排序的 基于 bootstrap 的表格组件, 使用 ajax 获取数据来源  
